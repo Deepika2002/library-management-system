@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+</head>
+<body>
+    <h1>Logging out...</h1>
+
+    <script>
+        // Initialize Firebase with your project's config (same as auth.js)
+        const firebaseConfig = {
+            apiKey: "AIzaSyBJHV8JQSg0yC6r3y17SrXDljhezvcZsDI",
+            authDomain: "library-management-syste-c0fda.firebaseapp.com",
+            projectId: "library-management-syste-c0fda",
+            storageBucket: "library-management-syste-c0fda.appspot.com",
+            messagingSenderId: "27958292709",
+            appId: "1:27958292709:web:b585cd3afe0102ef52640c",
+            measurementId: "G-YKKWPETE8E"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Handle logout
+        firebase.auth().signOut().then(function() {
+            // Sign-out successful, redirect to the login page
+            window.location.href = 'login.html'; // Replace 'login.html' with the actual login page
+        }).catch(function(error) {
+            console.error('Error:', error);
+        });
+    </script>
+</body>
+</html>

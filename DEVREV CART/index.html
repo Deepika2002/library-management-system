@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> <!-- Include your CSS file here -->
+    <title>Library Management System</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-profile">
+            <h2>User's Name</h2>
+        </div>
+        <ul class="options">
+            <li><a id="suggestions-link" href="#">Suggestions</a></li>
+            <li><a id="popular-books-link" href="#">Popular Books</a></li>
+        </ul>
+        <div class="contact-details">
+            <p>Contact Details: email@example.com</p>
+            <p>Follow us on: <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <main>
+        <header>
+            <h1>Library Management System</h1>
+            <div class="user-profile">
+                <div class="dropdown">
+                    <span id="user-display-name">Username</span>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <h1 class="heading">Search Books</h1>
+            <div class="cart">
+                <span class="cart-icon">🛒</span>
+                <span id="cartCount">0</span>
+            </div>
+            <div id="cartList" class="cart-list"></div>
+            <input id="searchInput" type="text" placeholder="Search for books">
+            <button id="searchButton">Search</button>
+            <div id="searchResults"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

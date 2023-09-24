@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <span class="password-toggle" onclick="togglePasswordVisibility(this)"></span>
+        </div>
+        <button type="submit">Login</button>
+        <div class="error-message" id="error-message"></div>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    
+    <script>
+        // JavaScript for password visibility toggle
+        function togglePasswordVisibility(element) {
+            const passwordInput = element.previousElementSibling;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                element.classList.add("visible");
+            } else {
+                passwordInput.type = "password";
+                element.classList.remove("visible");
+            }
+        }
+    </script>
+</body>
+</html>
